@@ -18,7 +18,7 @@ const Dashboard = () => {
       icon: faFileAlt,
       title: 'Project Proposal',
       lastEdited: '2 hours ago',
-      shared: 'Shared with 2 people',
+      shared: 'Shared with 1 people',
       bgColor: 'rgba(139, 237, 235, 0.3)',
       iconColor: '#8BEDEB'
     },

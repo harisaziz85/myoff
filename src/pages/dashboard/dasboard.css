@@ -123,6 +123,19 @@
   justify-content: center;
   border-radius: 100%;
 }
+.name3 {
+  background-color: #1E40AF;
+  position: absolute;
+  left: 23%;
+  height: 20px;
+  width: 20px;
+  font-size: 8px;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
 
 .recent-card-title {
   font-size: 16px;
