@@ -1,0 +1,155 @@
+.dash {
+  background-color: black;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.sbar {
+  width: 20%;
+  border-right: 1px solid rgb(31 41 55);
+  min-height: 89vh;
+  
+}
+
+.sbar-active {
+  display: block !important;
+}
+
+.quich {
+  width: 80%;
+  flex: 1;
+  padding: 16px;
+}
+
+.interbold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.recent {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.my-4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-button {
+  font-size: 0.75rem !important;
+  border: 0px !important;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  border-radius: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  color: white;
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sort-button:hover {
+  background-color: rgb(31 41 55 / 0.8);
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.recent-files-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.recent-card {
+  background: #1F2937;
+  border-radius: 8px;
+  align-items: center;
+  color: #ffffff;
+  transition: border 0.3s ease;
+}
+
+.recent-card:hover {
+  border: 2px solid var(--card-color);
+}
+
+.cardtop {
+  margin-bottom: 12px;
+}
+
+.recent-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.recent-card-icon svg {
+  font-size: 1.5rem;
+}
+
+.recent-card-content {
+  flex: 1;
+}
+
+.recent-card-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+  margin: 0 0 4px 0;
+}
+
+.recent-card-edited {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0 0 12px 0;
+}
+
+.recent-card-shared {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .sbar {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+  }
+
+  .quich {
+    width: 100%;
+  }
+
+  .recent-files-grid {
+    width: 100%;
+    grid-template-columns: 1fr; /* Show one card per row on phone screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .recent-files-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
