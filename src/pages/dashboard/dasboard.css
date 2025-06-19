@@ -2,6 +2,7 @@
   background-color: black;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
+  padding-top: 64px; /* Ensure content starts below topbar on large screens */
 }
 
 .d-flex {
@@ -12,7 +13,7 @@
   width: 20%;
   border-right: 1px solid rgb(31 41 55);
   min-height: 89vh;
-  
+  z-index: 1000; /* Ensure sidebar is below	H topbar on large screens */
 }
 
 .sbar-active {
@@ -23,6 +24,7 @@
   width: 80%;
   flex: 1;
   padding: 16px;
+  z-index: 999; /* Below topbar and sidebar on large screens */
 }
 
 .interbold {
@@ -80,11 +82,12 @@
   border-radius: 8px;
   align-items: center;
   color: #ffffff;
-  transition: border 0.3s ease;
+  transition: border-color 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .recent-card:hover {
-  border: 2px solid var(--card-color);
+  border-color: var(--card-color);
 }
 
 .cardtop {
@@ -109,6 +112,18 @@
   flex: 1;
 }
 
+.name2 {
+  background-color: #1E40AF;
+  height: 20px;
+  width: 20px;
+  font-size: 8px;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
 .recent-card-title {
   font-size: 16px;
   margin-bottom: 4px;
@@ -130,26 +145,34 @@
 @media (max-width: 767px) {
   .sbar {
     display: none;
-    position: absolute;
-    top: 64px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .quich {
     width: 100%;
+    margin-top: 64px;
   }
 
   .recent-files-grid {
     width: 100%;
-    grid-template-columns: 1fr; /* Show one card per row on phone screens */
+    grid-template-columns: 1fr;
+  }
+
+  .dash {
+    padding-top: 0; /* No padding on mobile since topbar hides */
   }
 }
 
 @media (min-width: 768px) {
   .recent-files-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sbar {
+    display: block !important;
   }
 }

@@ -34,9 +34,11 @@ const Dashboard = () => {
 
   return (
     <div className="dash">
-      <Topbar toggleSidebar={toggleSidebar} />
+      <Topbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
       <div className="d-flex">
-        <div className={`sbar ${isSidebarOpen ? 'sbar-active' : ''}`}><Sidebar/></div>
+        <div className={`sbar ${isSidebarOpen ? 'sbar-active' : ''}`}>
+          <Sidebar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+        </div>
         <div className="quich p-4">
           <Quickcard />
           <div className="d-flex justify-content-between my-4">
@@ -65,7 +67,10 @@ const Dashboard = () => {
                 <div className="recent-card-content">
                   <h4 className="recent-card-title intermedium">{file.title}</h4>
                   <p className="recent-card-edited">Last edited {file.lastEdited}</p>
-                  <p className="recent-card-shared">{file.shared}</p>
+                  <div className='d-flex align-items-center'>
+                    <div className='name2 me-1'>HA</div>
+                    <p className="recent-card-shared">{file.shared}</p>
+                  </div>
                 </div>
               </div>
             ))}

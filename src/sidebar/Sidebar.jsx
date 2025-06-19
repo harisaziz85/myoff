@@ -1,12 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faHome, faFolder, faFileAlt, faTable, faChartPie, faStickyNote, faUsers, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faHome, faFolder, faFileAlt, faTable, faChartPie, faStickyNote, faUsers, faCog, faTimes, faCompass } from '@fortawesome/free-solid-svg-icons';
 import './sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <div className="sidebar">
-    
+    <div className={`sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+      <div className="sidebar-header d-md-none">
+        <div className="d-flex align-items-center">
+          <FontAwesomeIcon icon={faCompass} className="text-custom-teal text-xl me-2" />
+          <span className="intersemibold">MyOffice</span>
+        </div>
+        <button className="close-button" onClick={toggleSidebar}>
+          <FontAwesomeIcon icon={faTimes} className="text-white text-xl" />
+        </button>
+      </div>
       <ul className="sidebar-menu">
         <li className="sidebar-item active">
           <FontAwesomeIcon icon={faHome} className="mr-3 text-gray-400" />
@@ -43,11 +51,11 @@ const Sidebar = () => {
       </ul>
       <div className="sidebar-user">
         <div className='sb1'>
-        <div className="user-avatar" style={{ backgroundColor: '#1E40AF' }}>HA</div>
-        <div className="user-info">
-          <span className="user-name intermedium">User Name</span>
-          <span className="user-email">user@example.com</span>
-        </div>
+          <div className="user-avatar" style={{ backgroundColor: '#1E40AF' }}>HA</div>
+          <div className="user-info">
+            <span className="user-name intermedium">User Name</span>
+            <span className="user-email">user@example.com</span>
+          </div>
         </div>
       </div>
     </div>

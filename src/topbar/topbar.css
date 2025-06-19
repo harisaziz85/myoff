@@ -1,3 +1,16 @@
+.topbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1002; /* Increased to stay above sidebar and content */
+  background-color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.topbar-hidden {
+  transform: translateY(-100%);
+}
+
 .topbarhead {
   width: 20%;
   border-right: 1px solid rgb(31 41 55);
@@ -57,8 +70,8 @@
 
 .name1 {
   background-color: #1E40AF;
-  height: 40px;
-  width: 40px;
+  height: 32px;
+  width: 32px;
   border-radius: 100%;
   display: flex;
   font-size: 15px;
@@ -90,12 +103,9 @@
     justify-content: space-between !important;
     border-right: 0px;
   }
-  .topsec{
+  .topsec {
     width: 0px;
     padding-right: 0px !important;
-  }
-
-  .topsec {
     display: none;
   }
 
@@ -112,7 +122,8 @@
   }
 
   .text-custom-teal {
-    margin-right: 0 !important;
+    margin-right: 5px !important;
+    font-size: 20px;
     margin-left: 0 !important;
   }
 
@@ -124,4 +135,8 @@
   .search-icon-container {
     margin-right: 0;
   }
+}
+
+input {
+  color: white;
 }

@@ -3,20 +3,20 @@ import './topbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faCompass, faQuestionCircle, faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 
-const Topbar = ({ toggleSidebar }) => {
+const Topbar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <div>
+    <div className={`topbar-container ${isSidebarOpen ? 'topbar-hidden' : ''}`}>
       <div className="d-flex">
         <div className='topbarhead intersemibold d-flex align-items-center'>
           <div className="d-flex align-items-center">
             <button className="toggle-button d-md-none me-1" onClick={toggleSidebar}>
-              <FontAwesomeIcon icon={faBars} className="text-white text-xl" />
+              <FontAwesomeIcon icon={faBars} className="text-white text-xl me-2" />
             </button>
-            <FontAwesomeIcon icon={faCompass} className="text-custom-teal text-xl" />
+            <FontAwesomeIcon icon={faCompass} className="text-custom-teal text-xl " />
             <span className='intersemibold ms-2'>MyOffice</span>
           </div>
           <div className="search-icon-container d-md-none">
-            <FontAwesomeIcon icon={faSearch} className="search-icon-mobile text-custom-teal text-xl" />
+            <FontAwesomeIcon icon={faSearch} className="search-icon-mobile text-white text-xl" />
           </div>
         </div>
         <div className='topsec d-flex align-items-center'>
