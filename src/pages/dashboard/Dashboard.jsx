@@ -14,21 +14,21 @@ const Dashboard = () => {
   };
 
   const recentFiles = [
-    { 
-      icon: faFileAlt, 
-      title: 'Project Proposal', 
-      lastEdited: '2 hours ago', 
-      shared: 'Shared with 2 people', 
-      bgColor: 'rgba(139, 237, 235, 0.3)', 
-      iconColor: '#8BEDEB' 
+    {
+      icon: faFileAlt,
+      title: 'Project Proposal',
+      lastEdited: '2 hours ago',
+      shared: 'Shared with 2 people',
+      bgColor: 'rgba(139, 237, 235, 0.3)',
+      iconColor: '#8BEDEB'
     },
-    { 
-      icon: faTable, 
-      title: 'Q1 Financials', 
-      lastEdited: 'yesterday', 
-      shared: 'Only you', 
-      bgColor: 'rgba(20, 83, 45, 0.3)', 
-      iconColor: '#4ADE80' 
+    {
+      icon: faTable,
+      title: 'Q1 Financials',
+      lastEdited: 'yesterday',
+      shared: 'Only you',
+      bgColor: 'rgba(20, 83, 45, 0.3)',
+      iconColor: '#4ADE80'
     },
   ];
 
